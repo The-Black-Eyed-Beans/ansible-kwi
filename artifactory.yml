@@ -10,12 +10,12 @@
   #   region: ${Region}
 
   tasks:
-    - name: Getting PEM key
-      aws_s3:
-        bucket: "{{ bucket }}"
-        object: "{{ pem }}"
-        dest: ./
-        mode: get
+    # - name: Getting PEM key
+    #   aws_s3:
+    #     bucket: "{{ bucket }}"
+    #     object: "{{ pem }}"
+    #     dest: ./
+    #     mode: get
 
     - name: Creating Artifactory Security Group
       ec2_group:
