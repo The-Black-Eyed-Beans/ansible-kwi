@@ -17,6 +17,11 @@
         dest: "./{{ pem }}"
         mode: get
 
+    - name: Setting permissions for PEM key
+      ansible.builtin.file:
+        path: "./{{ pem }}"
+        mode: "0600"
+
     - name: Creating Artifactory Security Group
       ec2_group:
         name: aline-kwi-artifactory-sg
