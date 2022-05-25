@@ -66,7 +66,7 @@
       loop: "{{ artifactory.instances }}"
 
     - name: Making Route53 record for artifactory
-      community.aws.route53:
+      route53:
         state: present
         zone: theblackeyedbeans.net
         record: artifactory.keshaun.theblackeyedbeans.net
