@@ -14,7 +14,7 @@
       aws_s3:
         bucket: "{{ bucket }}"
         object: "{{ pem }}"
-        dest: ./
+        dest: "./{{ pem }}"
         mode: get
 
     - name: Creating Artifactory Security Group
